@@ -1,0 +1,939 @@
+/* GLOBAL CSS | START */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-color-1: #f5f8f3;
+  --text-color-2: #37548f;
+  --text-color-3: #505050;
+  --main-color: black;
+  --background-color-1: #f59720;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar scroll için bg değişimi */
+.bgClass {
+  background-color: rgba(12, 12,12, 0.7);
+  transition: all 1s;
+  height: 72px;
+}
+/* GLOBAL CSS | END */
+
+/* ========================================================== */
+
+/* NAV | START */
+/* Kapsayıcı Nav */
+nav {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+/* responsivede gözükecek */
+.menu-btn,
+.menu-icon {
+  display: none;
+}
+/* nav items */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+/* Nav içindeki link etiketleri */
+.nav-items a {
+  font-size: 16px;
+  color: var(--text-color-1);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.nav-items a:hover:not(:last-child) {
+  text-decoration: underline;
+  color: cadetblue;
+}
+/* Nav içindeki joinus buton */
+.nav-items button {
+  background-color: var(--background-color-1);
+  border-radius: 4px;
+  border: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+.nav-items button:hover {
+  background-color: #ffbb63;
+}
+.nav-items button a {
+  padding: 0 10px;
+  margin: 0;
+}
+/* NAV | END */
+
+/* ========================================================== */
+
+/* HERO | START */
+/* Hero genel */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-1);
+  padding: 12rem 20% 2% 16%;
+  background-image: url(./img/hero-man.jpg);
+  background-size: cover;
+  background-position: center;
+}
+/* Hero başlık - powerfull */
+.hero-title {
+  background-color: var(--text-color-2);
+  border-radius: 4px;
+  border: none;
+  height: 40px;
+  color: var(--text-color-1);
+  width: 10rem;
+  text-shadow: 3px 3px 5px #000000;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 0.2rem;
+  font-size: 1.5rem;
+}
+/* Hero başlık - group practice */
+.container h1 {
+  font-size: 80px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* hero paragrafı */
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 23px;
+  font-weight: 700;
+  padding: 16px;
+}
+/* signup button */
+.sign-up {
+  background-color: var(--text-color-2);
+  border-radius: 5px;
+  border: none;
+  width: 7rem;
+  height: 3rem;
+  color: var(--text-color-1);
+  font-size: 22px;
+  font-weight: 800;
+  transition: background 0.3s ease;
+}
+.sign-up:hover {
+  background-color: #1f59ce;
+}
+/* details button */
+.details {
+  color: var(--text-color-1);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  border: 3px solid white;
+  height: 3rem;
+  width: 7rem;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 2rem;
+  transition: background 0.3s ease;
+}
+.details:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+/* HERO | END */
+
+/* ========================================================== */
+
+/* COURSE INFO | START */
+/* Kapsayıcı etiket */
+.course-info {
+  display: flex;
+  background-color: #f1f8ff;
+  justify-content: center;
+  padding: 1.5rem;
+}
+/* Her bir div için */
+.course-info div {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: 10px;
+  padding: 12px;
+  width: 13rem;
+  height: 7rem;
+}
+/* Dbi içindeki p elemanları için: sayılar */
+.course-info div p {
+  color: var(--text-color-2);
+  font-weight: 800;
+  text-align: center;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+/* Div içindeki span: yazılar */
+.course-info div span {
+  color: var(--main-color);
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+/* COURSE INFO | END */
+
+/* ========================================================== */
+
+/* OUR CLASSES | START */
+/* Kapsayıcı section etiketi */
+.our-courses {
+  position: relative;
+  padding: 0 0 40px 0;
+}
+/* section > div etiketi */
+.our-courses-div {
+  width: 60%;
+  margin: auto;
+}
+/* Backgroun şekli */
+.background-shape {
+  position: absolute;
+  right: 0;
+  z-index: -10;
+  height: 100%;
+  width: 50%;
+  background: #f6f6f6;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%, 12.5% 50%);
+}
+/* Our Classes başlık */
+.our-courses-div h2 {
+  color: var(--text-color-2);
+  text-align: center;
+  padding-top: 60px;
+  font-weight: 700;
+}
+/* Başlık altındaki çizgi */
+.heading-bottom-line {
+  border: solid 4px var(--background-color-1);
+  background-color: var(--background-color-1);
+  border-radius: 100px;
+  width: 10%;
+  height: 7px;
+  margin: 1rem auto;
+}
+/* Başlık altındaki paragraf */
+.our-courses p {
+  color: var(--text-color-3);
+  text-align: center;
+  font-weight: 700;
+}
+/* Courses Buttons */
+.our-courses-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+/* Buton kapsayıcısındaki butonlar */
+.our-courses-buttons button {
+  font-size: 18px;
+  background-color: var(--text-color-2);
+  color: var(--text-color-1);
+  border: none;
+  font-weight: 700;
+  border-radius: 5px;
+  min-width: 120px;
+  width: auto;
+  height: 50px;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+.our-courses button:hover {
+  background-color: var(--background-color-1);
+}
+/* Kurs içeriği kapsayıcı div */
+.our-courses-contents {
+  padding-top: 1.5rem;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+}
+/* Kurs içeriği başlık */
+.our-courses-contents h6 {
+  padding-top: 2rem;
+  font-weight: 800;
+  text-align: start;
+  color: var(--text-color-3);
+  font-size: 1.5rem;
+}
+/* Kurs içeriği paragraf */
+.our-courses-contents p {
+  font-weight: 600;
+  text-align: start;
+  color: var(--text-color-3);
+  margin-top: 1.5rem;
+  text-align: justify;
+  width: 90%;
+}
+/* Kurs görseli */
+.our-courses-contents img {
+  width: 40%;
+}
+/* OUR CLASSES | END */
+
+/* ========================================================== */
+
+/* BMI | START */
+/* bmi section */
+.bmi-sec {
+  display: flex;
+  width: 75%;
+  margin: 30px auto;
+  gap: 10%;
+  padding-bottom: 2rem;
+}
+/* bmi section > div */
+.bmi-div {
+  width: 50%;
+  margin: auto;
+}
+/* Başlık : BMI Calculator */
+.bmi-div h1 {
+  color: var(--text-color-2);
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+}
+/* BMI paragraf, açıklama */
+.bmi-div p {
+  font-weight: 700;
+  text-align: start;
+}
+/* inputlar */
+.align-inputs {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.bmi-div input {
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.bmi-div input::placeholder {
+  padding: 10px;
+  color: var(--text-color-3);
+}
+/* Görsel div */
+.img-div {
+  text-align: center;
+  position: relative;
+}
+
+/* Görseli kapsayan div */
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Görsel */
+.img-container img {
+  width: 100%;
+  display: block;
+}
+
+/* Sol alt köşeye yapışık üçgen */
+.material-triangle {
+  position: absolute;
+  line-height: 1;
+  bottom: 0;
+  top: 100%;
+  left: 5%;
+  color: var(--background-color-1);
+  font-size: 40px !important;
+  --mdc-icon-size: 50px;
+}
+
+/* BMI | END */
+
+/* ========================================================== */
+
+/* TRAINERS | START */
+/* Değerlendirme 12 : Our Best Trainers alanı için istenen "hover" düzgün çalışıyor mu? */
+
+/* Trainers başlık ve trainer kapsayacı */
+.trainers-global {
+  background-color: #f1f8ff;
+  padding: 60px 0;
+  text-align: center;
+}
+/* Our Best Trainers başlığı */
+.trainers-global h2 {
+  color: var(--text-color-2);
+  font-weight: 700;
+}
+/* Başlık altındaki paragraf */
+.trainers-global p {
+  color: var(--text-color-3);
+  font-weight: 700;
+}
+/* Trainerların kapsayıcı div */
+.trainer-container {
+  display: flex;
+  gap: 5rem;
+  width: 60%;
+  padding-top: 2rem;
+  margin: auto;
+}
+/* Trainer görseller */
+.trainer-container img {
+  position: relative;
+  width: 100%;
+  border: 3px solid var(--background-color-1);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+/* Sağ çubuk */
+.trainer-each::after {
+  position: absolute;
+  clip-path: inset(0 95% 0 0); /* çubuk */
+  content: "";
+  background-color: var(--text-color-2);
+  width: 10rem; /* kalınlık  */
+  height: 5rem; /* yükseklik*/
+  top: 35%;  /* yukardan mesafe*/
+  transition: 0.5s ease;
+}
+/* Sol çubuk */
+.trainer-each::before {
+  position: absolute;
+  content: "";
+  clip-path: inset(0 0 0 95%); /* çubuk */
+  background-color: var(--text-color-2);
+  width: 10rem; /* kalınlık  */
+  height: 5rem; /* yükseklik*/
+  top: 35%; /* yukardan mesafe*/
+  right: 100%; /* sağdan - mesafe*/
+  transition: 0.5s ease;
+}
+/* Üst çubuk */
+.frame-top {
+  position: absolute;
+  clip-path: inset(0 0 95% 0); /* çubuk */
+  background-color: var(--text-color-2);
+  width: 4rem; /* genişlik  */
+  height: 10rem; /* kalınlık  */
+  top: -2.5%; /* yukardan mesafe*/
+  left: 36%; /* soldan mesafe*/
+}
+/* Alt çubuk */
+.frame-bot {
+  position: absolute;
+  clip-path: inset(0 0 95% 0); /* çubuk */
+  background-color: var(--text-color-2);
+  width: 4rem; /* genişlik  */
+  height: 10rem; /* kalınlık  */
+  top: 100%; /* yukardan mesafe*/
+  left: 36%; /* soldan mesafe*/
+}
+/* Her bir trainerin div'i */
+.trainer-each {
+  position: relative;
+}
+/* Trainer isim ve açıklama */
+.trainer-info {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* content hizalama */
+  font-size: 16px;
+  color: white;
+  width: 70%;
+  transition: 0.3s ease;
+}
+/* Üstüne gelindiğinde içerik gözükür */
+.trainer-each:hover .trainer-info {
+  opacity: 1;
+}
+/* Üstüne gelindiğinde çubuklar uzar  */
+.trainer-each:hover::after,
+.trainer-each:hover::before {
+  height: 8rem;
+}
+/* Trainer açıklaması */
+.trainer-info p {
+  color: white;
+  font-weight: 400;
+}
+/* Trainer kutusunun şekli */
+.box-effect {
+  background-color: var(--text-color-2);
+  padding: 15px;
+  clip-path: polygon(
+    0 9%,
+    10% 9%,
+    10% 0%,
+    90% 0%,
+    90% 10%,
+    100% 10%,
+    100% 75%,
+    87% 76%,
+    87% 84%,
+    10% 84%,
+    10% 74%,
+    0 74%
+  );
+}
+/* TRAINERS | END */
+/* ========================================================== */
+/* PURCHASE | START */
+/* Genel kapsayıcı div */
+.shop-container {
+  padding: 40px 0;
+}
+/* Purchase from us - başlık */
+.shop-container h2 {
+  text-align: center;
+  color: var(--text-color-2);
+  font-weight: 700;
+}
+/* Başlık altındaki paragraf */
+.shop-container p:first-of-type{
+  text-align: center;
+  color: var(--text-color-3);
+  font-weight: 700;
+}
+/* Ekipmanların her bir cardı kapsayıcı */
+.facilities-container {
+  display: flex;
+  padding-top: 2rem;
+  gap:1.5rem;
+  width: 75%;
+  margin: auto;
+}
+/* Ekipmanların her bir cardı */
+.facilities-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+/* Görseller */
+.facilities-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+/* Card içeriği */
+.card-content {
+  text-align: center;
+  color: var(--main-color);
+  font-weight: 700;
+  padding: 10px 0 0 0;
+
+}
+.card-content p  span{
+  text-decoration: line-through;
+}
+.add-cart{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--main-color);
+  padding: 20px;
+}
+.add-cart p, .add-cart i {
+  color: var(--main-color);
+  margin-bottom: 0;
+  cursor: pointer;
+}
+/* PURCHASE | END */
+/* ==================================================== */
+/* COMMENTS | START */
+/* Comments kapsayıcı div */
+.comments-container {
+  background-color: #F1F8FF;
+  padding: 40px 0;
+}
+/* Review Client - başlık */
+.comments-container h2 {
+  text-align: center;
+  color: var(--text-color-2);
+  font-weight: 700;
+}
+/* Başlık altındaki paragraf */
+.comments-container .section-p {
+  text-align: center;
+  color: var(--text-color-3);
+  font-weight: 700;
+}
+/* Yorumların genel div'i */
+.client-container {
+  display: flex;
+  width:70%;
+  margin: auto;
+  gap :5rem;
+  padding: 2rem 0 2rem 0;
+}
+/* Her bir müşterinin görsel ve başlığı*/
+.client {
+  display: flex;
+  gap:0.5rem;
+  padding-bottom: 1rem;
+}
+/* Görsel */
+.client img {
+  border-radius: 50%;
+  width: 60px;
+}
+/* Müşteri başlığı  */
+.client-content{
+  display: flex;
+  flex-direction: column;
+}
+.client-content span{
+  color: var(--main-color);
+  font-weight: 700;
+}
+/* Yorum içeriği */
+.comment-content {
+  position: relative;
+  background-color: var(--text-color-2);
+}
+.comment-content p {
+  color: #ffff;
+  font-weight: 500;
+  padding: 1rem;
+}
+/* Yorumun sol uç kısmı */
+.comment-content::after {
+  content: "";
+  position: absolute;
+  clip-path: polygon(100% 0, 1% 0, 100% 100%);
+  background-color: #788ec2a1;
+  top: 100%;
+  left: 0;
+  width: 4rem;
+  height: 2rem;
+}
+/* Yorumun sağ uç kısmı */
+.comment-content::before {
+  content: "";
+  position: absolute;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  background-color: #788ec2a1;
+  top: 100%;
+  right: 0;
+  width: 4rem;
+  height: 2rem;
+}
+/* COMMENTS | END */
+/* ==================================================== */
+/* FORM | START */
+/* Kapsayıcı div */
+.contact-container {
+  padding: 50px 0;
+}
+/* Contact us - başlık */
+.contact-container h2 {
+  color: var(--text-color-2);
+  text-align: center;
+  font-weight: 700;
+}
+/* Başlık altındaki paragraf */
+.contact-container p {
+  color: var(--text-color-3);
+  text-align: center;
+  font-weight: 700;
+}
+/* map ve form div */
+.message-container{
+  display: flex;
+  width:60%;
+  margin: auto;
+  gap :5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.mobile-email{
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-color);
+  font-weight: 500;
+}
+/* Form elemanları */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+form input,textarea {
+  background-color: #F1F8FF;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 5px;
+}
+form input::placeholder, 
+form textarea::placeholder{
+  padding: 0px 0 0 10px;
+  font-weight: 500;
+}
+form textarea{
+  resize: none;
+}
+.map iframe {
+  width:150%;
+  height: 100%;
+}
+/* FORM | END */
+/* ============================================== */
+/* FOOTER | START */
+footer {
+  background-color: var(--text-color-2);
+}
+
+.footer {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.footer-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+}
+
+.footer-elements a {
+  text-decoration: none;
+  color: white;
+}
+.footer-elements a:hover{
+  text-decoration: underline;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+/* FOOTER | END */
+
+/* ================================================== */
+
+/* RESPONSIVE | START */
+/* Değerlendirme 7 : Sayfa farklı çözünürlüklerde doğru bir şekilde gösteriliyor mu?*/
+/* 575px ve altı ekranlar için medya sorgusu */
+@media screen and (max-width: 575px) {
+  html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .menu-btn {
+      display: none;
+  }
+  .menu-icon {
+      display: block;
+      font-size: 3rem;
+      color: var(--text-color-1);
+      padding-right: 2rem;
+  }
+  .nav-items {
+      position: absolute;
+      transform: translateY(-300px);
+  }
+  .nav-items button{
+    display: none;
+  }
+  .logo{
+    padding-left: 20px;
+  }
+  .navbar-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 10%;
+
+  }
+
+  .menu-btn:checked ~ .nav-items {
+      display: grid;
+      justify-content:center;
+      top: 100%;
+      width: 100%;
+      background-color: rgba(0, 134, 223, 0.5);
+      transform: translateY(0);
+      transition: 0.3s linear;
+  }
+  .menu-btn:checked ~ .nav-items a {
+      font-size: 1rem;
+      margin: 20px 0;
+  }
+  .hero {
+     padding: 20% 0 5% 0;
+  }
+  .sign-up{
+      width: 100%;
+      display: block;
+  }
+  .details {
+      margin-left: 0;
+      margin-top: 0.5rem;
+      display: block;
+      width: 100%;
+  }
+  .course-info{
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+
+  .course-info > div {
+      display: block;
+      width: 100%;
+  }
+
+  .our-courses{
+      display: block;
+      width: 100%;
+ 
+  }
+  .our-courses-div{
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  #class-content {
+      display: block;
+      width: 100%;
+  }
+
+  #class-content img {
+      display: block;
+      width: 100%;
+  }
+  
+  .bmi-sec{
+      display: block;
+      width: 100%;
+  }
+
+  .bmi-div {
+      width: 90%;
+  }
+  .align-inputs {
+    flex-direction: column;
+  }
+  .img-div {
+      display: block;
+      width: 100%;
+      padding-top: 2rem;
+  }
+  .img-div img  {
+      display: block;
+      width: 100%;
+  }
+  .trainers-global {
+      display: block;
+      width: 100%;
+  }
+
+  .trainers-global > p{
+    padding: 0 20px;
+  }
+
+  .trainer-container{
+    display: block;
+    width: 60%;
+  }
+
+  .trainer-each {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .shop-container {
+      display: block;
+      width: 100%;
+  }
+
+  .facilities-container {
+      display: block;
+      width: 80%;
+  }
+  
+  .facilities-card {
+      margin-bottom: 2rem;
+  }
+
+  .shop-container {
+      display: block;
+      width: 100%;
+  }
+
+  .client-container {
+      display: block;
+      width: 90%;
+      padding-bottom: 0.5rem;
+  }
+  .comments{
+      margin-bottom: 4rem;
+  }
+
+  .contact-container{
+    padding-top: 0;
+  }
+  .message-container {
+      display: block;
+      width: 80%;
+      padding-bottom: 0;
+  }
+
+  .footer {
+      display: block;
+      width: 90%;
+  }
+  
+  .footer-elements {
+      display: flex;
+      width: 90%;
+  }
+
+  .map iframe {
+    padding-top: 2rem;
+    width: 100%;
+    height: 300px;
+  }
+
+  .navbar-container, .hero, .course-info, .our-courses, .bmi-sec, .trainers, .shop, .comments, .contact, .footer{
+    max-width: 100%;
+  }
+}
+/* RESPONSIVE | END */
