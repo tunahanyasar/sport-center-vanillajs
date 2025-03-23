@@ -9,6 +9,7 @@ const classData = {
   yoga: {
     title: "Why are your Yoga?",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste corporis quam accusantium necessitatibus! Autem laudantium commodi recusandae molestiae voluptatum quidem assumenda, ratione in ullam minima et iure earum quod fugiat.",
+    title2: "Schedule:",
     program: [
       "Saturday-Sunday: 8:00am - 10:00am",
       "Monday-Tuesday: 10:00am - 12:00pm",
@@ -19,6 +20,7 @@ const classData = {
   group: {
     title: "Why are your Group?",
     desc: "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+    title2: "Schedule:",
     program: [
       "Saturday-Sunday: 9:00am - 11:00am",
       "Monday-Tuesday: 12:00pm - 14:00pm",
@@ -29,6 +31,7 @@ const classData = {
   solo: {
     title: "Why are your Solo?",
     desc: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.",
+    title2: "Schedule:",
     program: [
       "Saturday-Sunday: 8:00am - 10:00am",
       "Monday-Tuesday: 9:00am - 11:00pm",
@@ -39,6 +42,7 @@ const classData = {
   stretch: {
     title: "Why are your Stretch?",
     desc: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?",
+    title2: "Schedule:",
     program: [
       "Saturday-Sunday: 11:00am - 14:00pm",
       "Monday-Tuesday: 10:00am - 12:00pm",
@@ -61,9 +65,10 @@ btn.addEventListener("click", (e) => {
 
   contents[0].innerHTML = data.title; // Başlığı güncelle
   contents[1].innerHTML = data.desc; // Açıklamayı güncelle
-  contents[2].innerHTML = data.program[0]; // İlk zaman bilgisini güncelle
-  contents[3].innerHTML = data.program[1]; // İkinci zaman bilgisini güncelle
-  contents[4].innerHTML = data.program[2]; // Üçüncü zaman bilgisini güncelle
+  contents[2].innerHTML = data.title2; // Açıklamayı güncelle
+  contents[3].innerHTML = data.program[0]; // İlk zaman bilgisini güncelle
+  contents[4].innerHTML = data.program[1]; // İkinci zaman bilgisini güncelle
+  contents[5].innerHTML = data.program[2]; // Üçüncü zaman bilgisini güncelle
 
   document.querySelector("#class-content img").src = data.img; // Resmi güncelle
 });
